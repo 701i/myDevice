@@ -1,0 +1,48 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+iframe {
+    height: 100vh;
+    border-color: transparent;
+}
+
+#result{
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#result:has(li) {
+    font-size: 1.5rem;
+    color: #ffffffa8;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: unset;
+    position: absolute;
+    bottom: 0;
+}
+
+li {
+    list-style-type: none;
+    text-shadow:
+    0.1rem 0.1rem 0.1rem #000,
+    -0.1rem 0.1rem 0.1rem #000,
+    -0.1rem -0.1rem 0.1rem #000,
+    0.1rem -0.1rem 0.1rem #000;
+}
+
+/* Add your custom styles below */
