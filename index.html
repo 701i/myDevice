@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js/dist/ua-parser.min.js"></script>
+    <script src="./ua-parser.min.js"></script>
     <script>
         const uap = new UAParser();
         const device = uap.getDevice();
@@ -20,7 +20,7 @@
                 iframe.src = `https://www.google.com/search?q=${model}&igu=1`;
                 document.body.appendChild(iframe);
             }
-            for (let key in device) {
+            Object.keys(device).forEach(key => {
                 if (device[key]){
                     const listItem = document.createElement('li');
                     console.log(device[key]);
@@ -29,6 +29,7 @@
                     document.querySelector("#result").appendChild(listItem);
                 }    
             }
+        )
             if (document.querySelector("#result").querySelectorAll("li").length === 0) {
                 document.querySelector("#result").textContent = '⚠️ No device information found ⚠️';
             }
